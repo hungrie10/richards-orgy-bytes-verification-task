@@ -215,8 +215,6 @@ li{list-style: none;}
 
   padding: 8px 18px;
 
-  border-radius: 999px;
-
   font-size: 14px;
   font-weight: 600;
 
@@ -233,7 +231,12 @@ li{list-style: none;}
   color: #b45309;
 }
 
-/* CATEGORIES */
+#verify_me .status.unverified {
+  background: #00000024;
+  color: #000000;
+}
+
+
 #verify_me .category_list {
   display: flex;
   flex-wrap: wrap;
@@ -257,7 +260,7 @@ li{list-style: none;}
   color: #777;
 }
 
-/* RIGHT */
+
 #verify_me .logo_space {
   width: 180px;
 
@@ -273,3 +276,4 @@ li{list-style: none;}
 
   opacity: .95;
 }
+
