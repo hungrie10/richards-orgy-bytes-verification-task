@@ -4,7 +4,7 @@ I was tasked with creating a reusable verification component that changes it's o
 ## This means
 - A Verified User (Name, Green Verified Status, Categories, Date)
 - A Pending User (Yellow Pending Status, Message)
-- A Pending User (Gray Unverified Status, Message)
+- An Unverified User (Gray Unverified Status, Message)
 
 ## Conclusion
 Their state should render based on the users verified status
