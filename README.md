@@ -8,7 +8,7 @@ A reusable verification component built to dynamically display different user ve
 This project was created as part of a frontend verification task.
 The goal was to build a reusable UI component capable of displaying different verification states based on incoming user data.
 
-Instead of creating separate components for every user state, I decided to create a single configurable component that changes its appearance and content depending on the user's verification status.
+Instead of creating separate components for every user state, I decided to create a single reusable component that changes its appearance and content depending on the user's verification status.
 
 This approach improves:
 
@@ -78,11 +78,9 @@ While building this component, I made several intentional design decisions based
 
 ## 1. Single Reusable Component vs Multiple Separate Components
 
-One major decision was choosing to build a single reusable verification component instead of creating separate components for each verification state.
+One major decision was choosing to build a single reusable verification component instead of creating separate components for each verification state .
 
 ### Why I chose this approach
-
-Using one configurable component:
 
 * Reduced code duplication
 * Centralized the verification logic
