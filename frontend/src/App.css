@@ -123,8 +123,6 @@ body {
   padding: 5%;
 }
 
-
-
 .my_forms form {
   /* border: solid; */
   height: 100%;
@@ -295,8 +293,6 @@ label {
   margin-top: 10px;
 }
 
-
-
 @media (max-width: 950px) {
   #main_page {
     padding: 20px;
@@ -313,9 +309,15 @@ label {
   }
 }
 
-
-
 @media (max-width: 768px) {
+  #org_intro {
+    display: flex;
+    flex-direction: column;
+    /* border: solid red; */
+    justify-content: center;
+    align-items: center;
+  }
+
 
   #main_page {
     padding: 15px;
@@ -332,7 +334,7 @@ label {
     width: 100%;
     gap: 30px;
 
-    border-bottom: 1px solid rgba(255,255,255,0.08);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
   }
 
   #inner_main aside div span {
@@ -357,7 +359,6 @@ label {
     font-size: 12px;
   }
 
- 
   #org_byte_forms {
     width: 100%;
   }
@@ -374,11 +375,9 @@ label {
     font-size: 22px;
   }
 
-  
   .dropdown-content {
     max-height: 180px;
   }
-
 
   .job_picks li {
     font-size: 12px;
@@ -386,9 +385,7 @@ label {
   }
 }
 
-
 @media (max-width: 480px) {
-
   #main_page {
     padding: 0;
   }

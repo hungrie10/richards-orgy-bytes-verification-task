@@ -2,6 +2,8 @@ import React, { useState } from "react";
 
 function Create() {
   const [selectedItems, setSelectedItems] = useState([]);
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
 
   const items = [
     "Graphic Designer",
@@ -40,6 +42,7 @@ function Create() {
     "Makeup Artist",
     "Hair Stylist",
   ];
+
   function handleChange(value) {
     setSelectedItems((prev) => {
       if (prev.includes(value)) {
@@ -52,12 +55,28 @@ function Create() {
     });
   }
 
-  function submitSelection() {
-    alert("Selected items: " + selectedItems.join(", "));
+  async function submitSelection(e) {
+    e.preventDefault();
+
+    const formData = {
+      name,
+      email,
+      categories: selectedItems
+    };
+
+    const res = await fetch("http://localhost:5000/register", {
+      headers: { "Content-Type": "application/json" },
+      method: "POST",
+      body: JSON.stringify(formData),
+    });
+
+    const data = await res.json();
+    // location.reload();
   }
+
   return (
     <section className="my_forms">
-      <form>
+      <form onSubmit={(e) => submitSelection(e)}>
         <div>
           <h1>Create an account</h1>
           <p>Join Orgbyte and amazing freelancers and business</p>
@@ -66,17 +85,31 @@ function Create() {
         <div>
           <label>
             <p>Full Name</p>
-            <input type="text" placeholder="Enter your Full Name" />
+            <input
+              value={name}
+              type="text"
+              placeholder="Enter your Full Name"
+              onChange={(e) => setName(e.target.value)}
+            />
           </label>
           <label>
             <p>Email</p>
-            <input type="email" placeholder="Enter your Email" />
+            <input
+              value={email}
+              type="email"
+              placeholder="Enter your Email"
+              onChange={(e) => setEmail(e.target.value)}
+            />
           </label>
         </div>
 
         <div className="dropdown-wrapper">
           <div className="selected-box">
-            <ul className="job_picks">{selectedItems?.map((i) => <li>{i}</li>)}</ul>
+            <ul className="job_picks">
+              {selectedItems?.map((i) => (
+                <li>{i}</li>
+              ))}
+            </ul>
           </div>
 
           <div className="dropdown">
@@ -98,7 +131,7 @@ function Create() {
             </div>
           </div>
         </div>
-        <button type="submit" onClick={submitSelection} className="submit-btn">
+        <button type="submit" className="submit-btn">
           Submit
         </button>
       </form>
