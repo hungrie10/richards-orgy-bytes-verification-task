@@ -9,7 +9,6 @@ backend/.env
 backend/.env.*
 
 # Optional build folders
-frontend/dist/
 backend/dist/
 
 # Logs
