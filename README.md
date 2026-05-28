@@ -267,7 +267,10 @@ Through this project, I improved my understanding of:
 - Component scalability
 - Frontend architecture decisions
 
----
+
+
+# My design reference
+![Reference Preview](public/image.png)
 
 # Final Thoughts
 
