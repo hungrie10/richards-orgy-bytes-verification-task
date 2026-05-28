@@ -1,22 +1,3 @@
 [
-  {
-    "userID": "85d905f4-bc77-4d37-be04-05d1345d2f21",
-    "name": "Sheila",
-    "email": "richardcreatech@gmail.com",
-    "categories": [
-      "farmer",
-      "singer",
-      "boxer"
-    ],
-    "status": "pending",
-    "joinedDate": "2026-05-28"
-  },
-  {
-    "userID": "2db14a96-dfc0-41cd-bedf-5aa7dee0409d",
-    "email": "phacelessb@gmail.com",
-    "name": "Fish",
-    "categories": [],
-    "status": "pending",
-    "joinedDate": "2026-05-28"
-  }
+
 ]
