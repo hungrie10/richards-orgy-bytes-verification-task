@@ -1,9 +1,77 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-body{
-  background: #eafeff;
+#main_page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #e2e8f0; 
+}
+
+#inner_main {
+  display: flex;
+  width: 900px;
+  height: 600px;
+  border-radius: 7px;
+  overflow: hidden;
+  background: white;
+}
+
+#inner_main aside {
+    width: 320px;
+    background: #0f172a;
+    color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 9%;
+    /* justify-content: space-around; */
+}
+
+#inner_main aside li {
+    list-style: none;
+}
+
+#org_byte_forms {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+.dropbtn {
+  background-color: #f1f1f1;
+  color: black;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  min-width: 160px;
+  border: 1px solid #ddd;
+  z-index: 1;
+  overflow-y: auto;
+}
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+input[type="checkbox"] {
+  margin-right: 5px;
+}
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+.submit-btn {
+  margin-top: 10px;
 }
