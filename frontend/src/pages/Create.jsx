@@ -64,7 +64,7 @@ function Create() {
       categories: selectedItems
     };
 
-    const res = await fetch("http://localhost:5000/register", {
+    const res = await fetch("https://richards-orgy-bytes-verification-task.onrender.com/register", {
       headers: { "Content-Type": "application/json" },
       method: "POST",
       body: JSON.stringify(formData),

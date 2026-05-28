@@ -13,7 +13,7 @@ function VerificationBadge({ email }) {
       email,
     };
 
-    const res = await fetch("http://localhost:5000/login", {
+    const res = await fetch("https://richards-orgy-bytes-verification-task.onrender.com/login", {
       headers: { "Content-Type": "application/json" },
       method: "POST",
       body: JSON.stringify(formData),

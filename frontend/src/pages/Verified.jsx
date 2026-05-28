@@ -10,7 +10,7 @@ function Verified() {
      token,
     };
 
-    const res = await fetch("http://localhost:5000/verify", {
+    const res = await fetch("https://richards-orgy-bytes-verification-task.onrender.com/verify", {
       headers: { "Content-Type": "application/json" },
       method: "POST",
       body: JSON.stringify(formData),
