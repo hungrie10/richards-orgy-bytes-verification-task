@@ -2,6 +2,7 @@
 
 A reusable verification component built to dynamically display different user verification states (verified, pending, and unverified) while maintaining a consistent UI structure.
 
+
 # Overview
 
 This project was created as part of a frontend verification task.
@@ -16,6 +17,9 @@ This approach improves:
 - Maintainability
 - Consistency across the application
 
+
+
+
 # Problem Statement
 
 To show whether a user is verified, awaiting approval, or completely unverified.
@@ -27,6 +31,8 @@ Without a reusable structure:
 - Logic becomes harder to maintain
 
 This project solves that problem by centralizing the verification logic into one reusable component.
+
+
 
 # My Thought Process
 
@@ -63,6 +69,96 @@ This made the component easier to scale if more statuses are added later.
 l
 
 ---
+
+
+
+# Design Trade-offs
+
+While building this component, I made several intentional design decisions based on simplicity, scalability, and maintainability.
+
+## 1. Single Reusable Component vs Multiple Separate Components
+
+One major decision was choosing to build a single reusable verification component instead of creating separate components for each verification state.
+
+### Why I chose this approach
+
+Using one configurable component:
+
+* Reduced code duplication
+* Centralized the verification logic
+* Made styling easier to maintain
+* Improved scalability for future states
+
+### Trade-off
+
+This approach introduced more conditional rendering logic inside the component, which slightly increased complexity compared to fully separate components.
+
+However, I believed the maintainability and scalability benefits outweighed that added complexity.
+
+---
+
+## 2. Minimal Animations vs Performance Simplicity
+
+I considered adding animations and transitions between verification states to create a more interactive experience.
+
+### Why I chose not to
+
+I decided to prioritize:
+
+* Faster rendering
+* Simpler implementation
+* Cleaner state transitions
+* Better readability
+
+### Trade-off
+
+The interface is less visually dynamic compared to an animated UI, but the simpler implementation keeps the component lightweight and easier to maintain.
+
+---
+
+## 3. Static Data vs Full Backend Integration
+
+For this task, I used static/mock data instead of implementing a full backend and database system.
+
+### Why I chose this approach
+
+This allowed me to:
+
+* Focus on frontend architecture
+* Prioritize reusable UI logic
+* Complete the core requirements efficiently
+
+### Trade-off
+
+The component currently does not persist or fetch real user verification data from a server.
+
+If expanded further, I would integrate:
+
+* Node.js + Express
+* Database storage
+* Authentication
+* API validation
+
+---
+
+## 4. Conditional Rendering vs Separate Layout Files
+
+I chose conditional rendering within the component instead of maintaining entirely different layouts for each verification state.
+
+### Why I chose this approach
+
+Conditional rendering:
+
+* Keeps related logic together
+* Makes updates easier
+* Simplifies component management
+
+### Trade-off
+
+The JSX becomes slightly more complex as more conditions are introduced.
+
+To manage this, I kept the rendering structure organized and grouped related logic clearly.
+
 
 # Tech Stack
 
@@ -117,92 +213,7 @@ Displays:
 
 ---
 
-# Design Trade-offs
 
-While building this component, I made several intentional design decisions based on simplicity, scalability, and maintainability.
-
-## 1. Single Reusable Component vs Multiple Separate Components
-
-One major decision was choosing to build a single reusable verification component instead of creating separate components for each verification state.
-
-### Why I chose this approach
-
-Using one configurable component:
-
-- Reduced code duplication
-- Centralized the verification logic
-- Made styling easier to maintain
-- Improved scalability for future states
-
-### Trade-off
-
-This approach introduced more conditional rendering logic inside the component, which slightly increased complexity compared to fully separate components.
-
-However, I believed the maintainability and scalability benefits outweighed that added complexity.
-
----
-
-## 2. Minimal Animations vs Performance Simplicity
-
-I considered adding animations and transitions between verification states to create a more interactive experience.
-
-### Why I chose not to
-
-I decided to prioritize:
-
-- Faster rendering
-- Simpler implementation
-- Cleaner state transitions
-- Better readability
-
-### Trade-off
-
-The interface is less visually dynamic compared to an animated UI, but the simpler implementation keeps the component lightweight and easier to maintain.
-
----
-
-## 3. Static Data vs Full Backend Integration
-
-For this task, I used static/mock data instead of implementing a full backend and database system.
-
-### Why I chose this approach
-
-This allowed me to:
-
-- Focus on frontend architecture
-- Prioritize reusable UI logic
-- Complete the core requirements efficiently
-
-### Trade-off
-
-The component currently does not persist or fetch real user verification data from a server.
-
-If expanded further, I would integrate:
-
-- Node.js + Express
-- Database storage
-- Authentication
-- API validation
-
----
-
-## 4. Conditional Rendering vs Separate Layout Files
-
-I chose conditional rendering within the component instead of maintaining entirely different layouts for each verification state.
-
-### Why I chose this approach
-
-Conditional rendering:
-
-- Keeps related logic together
-- Makes updates easier
-- Simplifies component management
-
-### Trade-off
-
-The JSX becomes slightly more complex as more conditions are introduced.
-
-To manage this, I kept the rendering structure organized and grouped related logic clearly.
 
 # Why I Chose This Approach
 
