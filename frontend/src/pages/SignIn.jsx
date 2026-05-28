@@ -19,6 +19,7 @@ function SignIn() {
     });
 
     const data = await res.json();
+console.log(data)
   }
   return (
     <section className="my_forms">
@@ -31,11 +32,11 @@ function SignIn() {
         <div>
           <label htmlFor="">
             <p>Username</p>
-            <input type="text" placeholder="Enter your username" onChange={(e) => setName(e.target.name)}/>
+            <input type="text" placeholder="Enter your username" onChange={(e) => setName(e.target.value)}/>
           </label>
           <label htmlFor="">
             <p>Email</p>
-            <input type="text" placeholder="Enter your email" onChange={(e) => setEmail(e.target.name)}/>
+            <input type="text" placeholder="Enter your email" onChange={(e) => setEmail(e.target.value)}/>
           </label>
         </div>
 
