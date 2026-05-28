@@ -2,6 +2,7 @@ const fs = require("fs").promises;
 const express = require("express");
 const nodemailer = require("nodemailer");
 const { v4: uuidv4 } = require("uuid");
+const cors = require('cors')
 const jwt = require("jsonwebtoken");
 const path = "./db.json";
 
@@ -10,6 +11,7 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 
 app.use(express.json());
+app.use(cors());
 
 const transporter = nodemailer.createTransport({
   host: "smtp.gmail.com",
@@ -227,8 +229,9 @@ app.post("/login", async (req, res) => {
     return res.status(200).json({
       message: "User found",
       user: {
-        userID: user.userID,
+        name: user.name,
         email: user.email,
+        categories: user.categories,
         status: user.status,
       },
     });

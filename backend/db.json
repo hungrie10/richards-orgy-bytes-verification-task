@@ -1,3 +1,90 @@
 [
-
+  {
+    "userID": "a4825924-1cc5-444d-b33b-a135ddd2e6ec",
+    "name": "J",
+    "email": "richardcreatech@gmail.com",
+    "categories": [
+      "Graphic Designer",
+      "Illustrator",
+      "Animator"
+    ],
+    "status": "verified",
+    "joinedDate": "2026-05-28"
+  },
+  {
+    "userID": "ba334361-8dc7-4745-8e85-476f3fcfa62a",
+    "email": "r@gmail.com",
+    "name": "Unknown",
+    "categories": [],
+    "status": "unverified",
+    "joinedDate": "2026-05-28"
+  },
+  {
+    "userID": "198cb93f-1930-4905-bef6-298448d0e3d5",
+    "email": "v",
+    "name": "Unknown",
+    "categories": [],
+    "status": "unverified",
+    "joinedDate": "2026-05-28"
+  },
+  {
+    "userID": "36cd38da-c2d4-4e84-a668-48a91a2d7012",
+    "email": "f",
+    "name": "Unknown",
+    "categories": [],
+    "status": "unverified",
+    "joinedDate": "2026-05-28"
+  },
+  {
+    "userID": "32a143ea-357b-433a-9582-47619c4a5173",
+    "email": "m",
+    "name": "Unknown",
+    "categories": [],
+    "status": "unverified",
+    "joinedDate": "2026-05-28"
+  },
+  {
+    "userID": "213d05a2-e476-4d3b-a731-ab8a274c2978",
+    "email": "p",
+    "name": "Unknown",
+    "categories": [],
+    "status": "unverified",
+    "joinedDate": "2026-05-28"
+  },
+  {
+    "userID": "45844100-03ec-4ea2-8463-113c37b06276",
+    "email": "s",
+    "name": "Unknown",
+    "categories": [],
+    "status": "unverified",
+    "joinedDate": "2026-05-28"
+  },
+  {
+    "userID": "953aa82a-b851-4a3d-b619-15915cc6e062",
+    "email": "richardcreatech@gmail.co",
+    "name": "Unknown",
+    "categories": [],
+    "status": "unverified",
+    "joinedDate": "2026-05-28"
+  },
+  {
+    "userID": "a5139f44-984c-493a-a832-49f2cad8f16c",
+    "name": "Love",
+    "email": "love@gmail.com",
+    "categories": [
+      "Actor",
+      "Musician",
+      "Film Director"
+    ],
+    "status": "pending",
+    "joinedDate": "2026-05-28"
+  },
+  {
+    "userID": "5ea7a80b-49b8-424c-a7a3-74a2f8f7518c",
+    "email": "love@gmail.co",
+    "name": "Unknown",
+    "categories": [],
+    "status": "unverified",
+    "joinedDate": "2026-05-28"
+  }
 ]
