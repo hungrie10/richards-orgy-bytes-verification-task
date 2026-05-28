@@ -95,7 +95,7 @@ app.post("/register", async (req, res) => {
     if (user.status === "unverified") {
       // Move them to pending, resend email
       user.status = "pending";
-
+        user.name = name
       // Generate new token for verification
       const token = jwt.sign(
         { id: user.userID, email },
