@@ -4,12 +4,20 @@
   box-sizing: border-box;
 }
 
+*::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
 #main_page {
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background: #e2e8f0; 
+  background: #e2e8f0;
 }
 
 #inner_main {
@@ -22,49 +30,260 @@
 }
 
 #inner_main aside {
-    width: 320px;
-    background: #0f172a;
-    color: white;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 9%;
-    /* justify-content: space-around; */
+  width: 320px;
+  background: #0f172a;
+  color: white;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 9%;
 }
 
 #inner_main aside li {
-    list-style: none;
+  list-style: none;
 }
 
 #org_byte_forms {
   flex: 1;
-  padding: 20px;
   overflow-y: auto;
+}
+
+.sidebar_links {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 3px;
+  list-style: none;
+}
+
+/* CARD */
+.sidebar_links li a {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 7px;
+
+  text-decoration: none;
+  color: white;
+
+  border-radius: 10px;
+
+  background: #1e293b36;
+  border: solid 0.015px #ffffff00;
+
+  transition: 0.25s ease;
+}
+
+/* HOVER EFFECT */
+.sidebar_links li a:hover {
+  border: solid 0.015px #ffffff2b;
+  /* transform: translateY(-2px); */
+
+  background: linear-gradient(135deg, #ffffff09);
+}
+
+/* ICON */
+.sidebar_links li a svg,
+.sidebar_links li a img {
+  flex-shrink: 0;
+
+  width: 22px;
+  height: 22px;
+
+  padding: 10px;
+
+  border-radius: 12px;
+
+  background: rgba(255, 255, 255, 0.05);
+}
+
+/* TEXT */
+.sidebar_links li a span {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.sidebar_links li a h2 {
+  font-size: 16px;
+  margin: 0;
+}
+
+.sidebar_links li a p {
+  margin: 0;
+
+  font-size: 13px;
+  line-height: 1.5;
+
+  color: #94a3b8;
+}
+
+.my_forms {
+  height: 100%;
+  padding: 5%;
+}
+
+
+
+.my_forms form {
+  /* border: solid; */
+  height: 100%;
+  padding: 3px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 50px;
+}
+
+.my_forms form h1 {
+  font-size: 24px;
+  margin-bottom: 6px;
+}
+
+.my_forms form p {
+  color: #64748b;
+  font-size: 14px;
+}
+
+.my_forms form div {
+  /* border: solid; */
+}
+
+.my_forms form label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 14px;
+  color: #334155;
+}
+
+.my_forms form input {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  outline: none;
+  transition: 0.2s ease;
+}
+
+.my_forms form input:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+}
+
+.my_forms form button[type="submit"] {
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background: #003fa3;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.my_forms form button:hover {
+  background: #1e293b;
+  color: white;
+}
+
+.dropdown-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.selected-box {
+  min-height: 50px;
+  padding: 12px;
+
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+
+  background: white;
+
+  display: flex;
+  align-items: center;
+
+  font-size: 14px;
+  color: #334155;
+
+  overflow-x: auto;
 }
 
 .dropdown {
   position: relative;
-  display: inline-block;
+  width: 100%;
 }
+
 .dropbtn {
-  background-color: #f1f1f1;
-  color: black;
-  padding: 10px 20px;
-  font-size: 16px;
-  border: none;
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  background: #f8fafc;
   cursor: pointer;
+  font-size: 14px;
+  text-align: left;
 }
+
 .dropdown-content {
   display: none;
   position: absolute;
-  min-width: 160px;
-  border: 1px solid #ddd;
-  z-index: 1;
+  top: 110%;
+  left: 0;
+  width: 100%;
+  max-height: 220px;
   overflow-y: auto;
+  background: white;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  padding: 10px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  z-index: 100;
 }
+
 .dropdown:hover .dropdown-content {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
+
+.dropdown-content label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  cursor: pointer;
+}
+
+.dropdown-content label input {
+  width: 16px;
+  height: 16px;
+
+  margin: 0;
+}
+
+.job_picks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.job_picks li {
+  padding: 8px 14px;
+  background: #dbeafe;
+  color: #1e3a8a;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 500;
+  border: 1px solid #93c5fd;
+}
+
 input[type="checkbox"] {
   margin-right: 5px;
 }
@@ -74,4 +293,141 @@ label {
 }
 .submit-btn {
   margin-top: 10px;
+}
+
+
+
+@media (max-width: 950px) {
+  #main_page {
+    padding: 20px;
+  }
+
+  #inner_main {
+    width: 100%;
+    height: auto;
+    min-height: 600px;
+  }
+
+  #inner_main aside {
+    width: 280px;
+  }
+}
+
+
+
+@media (max-width: 768px) {
+
+  #main_page {
+    padding: 15px;
+    align-items: flex-start;
+  }
+
+  #inner_main {
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+  }
+
+  #inner_main aside {
+    width: 100%;
+    gap: 30px;
+
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+  }
+
+  #inner_main aside div span {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .sidebar_links {
+    gap: 12px;
+  }
+
+  .sidebar_links li a {
+    padding: 14px;
+  }
+
+  .sidebar_links li a h2 {
+    font-size: 15px;
+  }
+
+  .sidebar_links li a p {
+    font-size: 12px;
+  }
+
+ 
+  #org_byte_forms {
+    width: 100%;
+  }
+
+  .my_forms {
+    padding: 25px 20px;
+  }
+
+  .my_forms form {
+    gap: 30px;
+  }
+
+  .my_forms form h1 {
+    font-size: 22px;
+  }
+
+  
+  .dropdown-content {
+    max-height: 180px;
+  }
+
+
+  .job_picks li {
+    font-size: 12px;
+    padding: 7px 12px;
+  }
+}
+
+
+@media (max-width: 480px) {
+
+  #main_page {
+    padding: 0;
+  }
+
+  #inner_main {
+    border-radius: 0;
+    min-height: 100vh;
+  }
+
+  .my_forms {
+    padding: 20px 16px;
+  }
+
+  .my_forms form {
+    gap: 24px;
+  }
+
+  .my_forms form h1 {
+    font-size: 20px;
+  }
+
+  .my_forms form p {
+    font-size: 13px;
+  }
+
+  .sidebar_links li a {
+    gap: 12px;
+  }
+
+  .sidebar_links li a svg,
+  .sidebar_links li a img {
+    width: 18px;
+    height: 18px;
+    padding: 8px;
+  }
+
+  .dropbtn,
+  .my_forms form input,
+  .my_forms form button {
+    font-size: 13px;
+  }
 }

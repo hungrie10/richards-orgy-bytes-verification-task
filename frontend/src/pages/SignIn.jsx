@@ -2,10 +2,12 @@ import React from "react";
 
 function SignIn() {
   return (
-    <section>
+    <section className="my_forms">
       <form>
+        <div>
         <h1>Welcome Back</h1>
         <p>Now to check your verification status</p>
+        </div>
 
         <div>
           <label htmlFor="">
@@ -18,7 +20,7 @@ function SignIn() {
           </label>
         </div>
 
-        <button>Submit</button>
+        <button type="submit">Submit</button>
       </form>
     </section>
   );

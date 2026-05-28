@@ -58,8 +58,11 @@ function Create() {
   return (
     <section className="my_forms">
       <form>
-        <h1>Create an account</h1>
-        <p>Join Orgbyte and amazing freelancers and business</p>
+        <div>
+          <h1>Create an account</h1>
+          <p>Join Orgbyte and amazing freelancers and business</p>
+        </div>
+
         <div>
           <label>
             <p>Full Name</p>
@@ -70,9 +73,16 @@ function Create() {
             <input type="email" placeholder="Enter your Email" />
           </label>
         </div>
-        <div>
+
+        <div className="dropdown-wrapper">
+          <div className="selected-box">
+            <ul className="job_picks">{selectedItems?.map((i) => <li>{i}</li>)}</ul>
+          </div>
+
           <div className="dropdown">
-            <button className="dropbtn">Select Items</button>
+            <button type="button" className="dropbtn">
+              Select Items
+            </button>
 
             <div className="dropdown-content">
               {items.map((item) => (
@@ -82,16 +92,15 @@ function Create() {
                     checked={selectedItems.includes(item)}
                     onChange={() => handleChange(item)}
                   />
-                  {item}
+                  <span>{item}</span>
                 </label>
               ))}
             </div>
           </div>
-
-          <button onClick={submitSelection} className="submit-btn">
-            Submit
-          </button>
         </div>
+        <button type="submit" onClick={submitSelection} className="submit-btn">
+          Submit
+        </button>
       </form>
     </section>
   );

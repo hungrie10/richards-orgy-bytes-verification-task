@@ -1,6 +1,6 @@
 import { Link, Routes, Route } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPerson } from "@fortawesome/free-solid-svg-icons";
+import { faComputer, faPerson, faTicket } from "@fortawesome/free-solid-svg-icons";
 import { faLock } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
 import logo from "../public/logo.png";
@@ -22,7 +22,7 @@ function App() {
             <p>Where Innovation Meets Integrity</p>
           </div>
 
-          <ul>
+          <ul className="sidebar_links">
             <li>
               <Link to={"/"}>
                 <FontAwesomeIcon icon={faPerson} />
@@ -34,7 +34,7 @@ function App() {
             </li>
             <li>
               <Link to={"/verified"}>
-                <img src={verifiy} width={40} alt="" />
+                <FontAwesomeIcon icon={faTicket} />
                 <span>
                   <h2>Get Verified</h2>
                   <p>Verify your Identity</p>
@@ -43,7 +43,7 @@ function App() {
             </li>
             <li>
               <Link to={"/signin"}>
-                <FontAwesomeIcon icon={faPerson} />
+                <FontAwesomeIcon icon={faComputer} />
                 <span>
                   <h2>Check Verification Status</h2>
                   <p>
@@ -54,14 +54,7 @@ function App() {
             </li>
           </ul>
 
-          <article>
-            <FontAwesomeIcon icon={faLock} />
-            <span>
-              <h3>Technology Rooted in Trust.</h3>
-              <p> Explore our innovative solutions to unlock your business potential today.</p>
-              <p></p>
-            </span>
-          </article>
+       
         </aside>
         <section id="org_byte_forms">
           <Routes>
