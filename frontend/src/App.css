@@ -293,6 +293,128 @@ label {
   margin-top: 10px;
 }
 
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-40px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.verification-card {
+  position: fixed;
+  top: 3%;
+  right: 3%;
+  width: 340px;
+  background: #fff;
+  padding: 0.85rem;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  font-family: sans-serif;
+  border: solid 0.25px;
+  animation: slideDown 0.5s ease;
+}
+
+.verification-card li {
+  list-style: none;
+}
+
+.verification-card div:first-child {
+  display: flex;
+  flex-direction: column;
+  /* gap: 0.25rem; */
+  margin-inline: 2%;
+}
+
+.verification-card div {
+  margin-block: 4%;
+}
+
+.verification-card svg {
+  font-size: 0.95rem;
+  color: #000000;
+}
+
+.verification-card h3 {
+  color: #111827;
+  margin: 0;
+}
+
+.verification-card p {
+  margin: 0;
+  color: #6b7280;
+  font-size: 0.9rem;
+}
+
+.verification-card div:nth-child(2) {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin: 1.5%;
+  border: 1px solid #e5e7eb;
+  /* padding: .8rem; */
+  border-radius: 14px;
+  background: #fafafa;
+}
+
+.verification-card div:nth-child(2) span:first-child {
+  width: 4px;
+  height: 38px;
+  /* background: #32c852; */
+  border-radius: 20px;
+}
+
+.verification-card div:nth-child(2) span:first-child.status-line {
+  width: 4px;
+  height: 38px;
+  border-radius: 20px;
+}
+
+.verification-card div:nth-child(2) span:first-child.status-line.verified {
+  background: #32c852;
+}
+
+.verification-card div:nth-child(2) span:first-child.status-line.pending {
+  background: #f59e0b;
+}
+
+.verification-card div:nth-child(2) span:first-child.status-line.unverified {
+  background: #9ca3af;
+}
+
+.verification-card div:nth-child(2) span:last-child {
+  font-weight: 600;
+  color: #111827;
+  font-size: 0.95rem;
+}
+
+.verification-card ul {
+  display: flex;
+  gap: 0.7rem;
+  flex-wrap: wrap;
+  padding: 0;
+  /* border: solid; */
+  justify-content: center;
+  margin: 5px;
+}
+
+.verification-card ul li {
+  list-style: none;
+  padding: 2px 23px;
+  border: 1.5px solid #e8defd;
+  border-radius: 999px;
+  color: #7c5cff;
+  background: #faf7ff;
+  font-weight: 500;
+  font-size: 0.85rem;
+  transition: 0.3s ease;
+}
+
 @media (max-width: 950px) {
   #main_page {
     padding: 20px;
@@ -317,7 +439,6 @@ label {
     justify-content: center;
     align-items: center;
   }
-
 
   #main_page {
     padding: 15px;
