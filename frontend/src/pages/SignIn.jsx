@@ -12,7 +12,7 @@ function SignIn() {
       email,
     };
 
-    const res = await fetch("http://localhost:5000/register", {
+    const res = await fetch("http://localhost:5000/login", {
       headers: { "Content-Type": "application/json" },
       method: "POST",
       body: JSON.stringify(formData),
