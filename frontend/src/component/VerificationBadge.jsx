@@ -62,7 +62,7 @@ function VerificationBadge({ email }) {
             <p>You are unverified</p>
           </span>
         )}
-        {status == "Pending" && (
+        {status == "pending" && (
           <span>
             <p>You are Pending</p>
           </span>
