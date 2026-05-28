@@ -1,0 +1,14 @@
+[
+  {
+    "userID": "c739d2cc-1574-408d-bc3d-a2e27e8e5fc6",
+    "name": "Sheila",
+    "email": "richardcreatech@gmail.com",
+    "categories": [
+      "farmer",
+      "singer",
+      "boxer"
+    ],
+    "status": "pending",
+    "joinedDate": "2026-05-28"
+  }
+]
